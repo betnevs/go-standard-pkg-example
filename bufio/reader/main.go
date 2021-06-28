@@ -189,7 +189,7 @@ func main() {
 		fmt.Printf("Token: %q, prefix: %t\n", token, isPrefix)
 	}
 	fmt.Println()
-	// 从 Reader 读入然后写入到 Writer，生成消费模型
+	// 不断从 Reader 读入然后写入到 Writer 中。
 	fmt.Println("Buffer reader write to:")
 	bfr9 := bufio.NewReaderSize(new(R), 16)
 	wn, err := bfr9.WriteTo(ioutil.Discard)

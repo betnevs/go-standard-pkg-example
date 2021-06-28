@@ -111,7 +111,7 @@ func main() {
 	bw5.WriteString("abc好")
 	fmt.Println("buffer size:", bw5.Buffered())
 	fmt.Println()
-	// 使用 ReaForm 不断从 Reader 中读取数据。
+	// 使用 ReadFrom() 不断从 Reader 中读取数据然后写入到 Writer 中。
 	fmt.Println("Buffer writer ReadForm:")
 	w6 := new(MyWriter)
 	bw6 := bufio.NewWriterSize(w6, 3)
